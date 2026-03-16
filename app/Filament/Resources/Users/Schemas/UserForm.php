@@ -17,10 +17,12 @@ class UserForm
                 TextInput::make('email')
                     ->email()
                     ->required()
+                    ->unique()
                     ->maxLength(255),
                 TextInput::make('password')
                     ->password()
                     ->required()
+                    ->maxLength(6),
             ]);
     }
 }
